@@ -34,9 +34,7 @@ int main() {
    else if (choix == '4') {
     std::cout << "Quitter l'application\n"; } 
    
-   else {
-    std::cout << "Choix invalide\n";
-  } while ((choix != '0') && (choix != '4'));
+    
   
   return 0;
 }
