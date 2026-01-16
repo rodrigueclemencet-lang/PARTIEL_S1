@@ -18,5 +18,25 @@ int main() {
   cout << "2. Restituer un vélô" << endl;
   cout << "3. Estimer le coût de la location" << endl;	
   cout << "4. Quitter l'application" << endl << endl;
+  cin >> (choix);
+  cout << endl;
+
+
+  if (choix == '1') {
+       std::cout << "Emprunter un vélô\n";}
+      
+   else if (choix == '2') {
+    std::cout << "Restituer un vélô\n";}
+    
+   else if (choix == '3') {
+     std::cout << "Estimer le coût de la location\n";}
+     
+   else if (choix == '4') {
+    std::cout << "Quitter l'application\n"; } 
+   
+   else {
+    std::cout << "Choix invalide\n";
+  } while ((choix != '0') && (choix != '4'));
+  
   return 0;
 }
