@@ -30,16 +30,15 @@ int main() {
   if (choix == '1') {
     if  (velosDispos > 0){
       velosDispos --;
-        capacite ++;
+        
    cout << "Vélô Emprunté\n";
     } else {
       cout << "Erreur :aucun vélo disponible\n";
     }
     
   } else if (choix == '2') {
-    if  (capacite > 0){
+    if  (velosDispos < 20){
       velosDispos ++;
-        capacite --;
     cout << "Vélô restituer avec succés\n";
     } else
     {cout << "Erreur :aucun point d'accroche disponible\n";
@@ -59,10 +58,10 @@ int main() {
     coutvelo = (duree / 60) * coutHoraireMeca;}
     else if (type == '2'){
     coutvelo = (duree / 60) * coutHoraireElec;}
-    else {
+   else {
       cout << "Type de vélo invalide\n";}
     
-
+  
     
   } else if (choix == '4') {
    cout << "Au revoir\n";}
