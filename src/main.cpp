@@ -47,7 +47,7 @@ int main() {
 
   } else if (choix == '3'){
     int type;
-    int duree;
+    float duree;
     float coutvelo = 0;
     
     cout << "type de vélo : (1 mécanqiue, 2 éléctrique)\n";
@@ -56,10 +56,10 @@ int main() {
     cin >> duree;
 
     if (type == '1') {
-    coutvelo = (duree / 60) * coutHoraireMeca;}
+    coutvelo = (float) (duree / 60) * coutHoraireMeca;}
     else if (type == '2'){
-    coutvelo = (duree / 60) * coutHoraireElec;}
-   
+    coutvelo = (float) (duree /60) * coutHoraireElec;}
+   cout << "Cout : " << coutvelo << "euros" << endl;
     
   
     
