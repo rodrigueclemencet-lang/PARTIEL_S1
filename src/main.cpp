@@ -8,7 +8,7 @@ int main() {
   int velosDispos = 20;
   int capacite = 20;
   unsigned char choix;
-  
+  do{
   cout << "****** Gestion d'une station Vélô ******" << endl << endl;
   cout << "-----------------------------------------" << endl;
 
@@ -37,8 +37,9 @@ int main() {
     }
     
   } else if (choix == '2') {
-    if  (velosDispos < 20){
+    if  (velosDispos < capacite){
       velosDispos ++;
+    
     cout << "Vélô restituer avec succés\n";
     } else
     {cout << "Erreur :aucun point d'accroche disponible\n";
@@ -58,15 +59,14 @@ int main() {
     coutvelo = (duree / 60) * coutHoraireMeca;}
     else if (type == '2'){
     coutvelo = (duree / 60) * coutHoraireElec;}
-   else {
-      cout << "Type de vélo invalide\n";}
+   
     
   
     
   } else if (choix == '4') {
    cout << "Au revoir\n";}
 
-  
+  }while (choix != '4');
 
   return 0;
 }
