@@ -13,7 +13,7 @@ int main() {
   cout << "-----------------------------------------" << endl;
 
   cout << "Vélos disponibles :" << velosDispos << endl;
-  cout << "Point d'attache disponibles :" << capacite << endl;
+  cout << "Point d'attache disponibles :" << capacite - velosDispos  << endl;
 
   cout << "-----------------------------------------" << endl << endl;
   cout << "1. Emprunter un vélô" << endl;
@@ -28,16 +28,46 @@ int main() {
 
 
   if (choix == '1') {
-   cout << "Emprunter un vélô\n";
-
+    if  (velosDispos > 0){
+      velosDispos --;
+        capacite ++;
+   cout << "Vélô Emprunté\n";
+    } else {
+      cout << "Erreur :aucun vélo disponible\n";
+    }
+    
   } else if (choix == '2') {
-    cout << "Restituer un vélô\n";
+    if  (capacite > 0){
+      velosDispos ++;
+        capacite --;
+    cout << "Vélô restituer avec succés\n";
+    } else
+    {cout << "Erreur :aucun point d'accroche disponible\n";
+    }
 
-  } else if (choix == '3') {
-    cout << "Estimer le coût de la location\n";
+  } else if (choix == '3'){
+    int type;
+    int duree;
+    float coutvelo = 0;
+    
+    cout << "type de vélo : (1 mécanqiue, 2 éléctrique)\n";
+    cin >> type;
+    cout << "Duree de location\n";
+    cin >> duree;
 
+    if (type == '1') {
+    coutvelo = (duree / 60) * coutHoraireMeca;}
+    else if (type == '2'){
+    coutvelo = (duree / 60) * coutHoraireElec;}
+    else {
+      cout << "Type de vélo invalide\n";}
+    
+
+    
   } else if (choix == '4') {
-   cout << "Quitter l'application\n";}
+   cout << "Au revoir\n";}
+
+  
 
   return 0;
 }
